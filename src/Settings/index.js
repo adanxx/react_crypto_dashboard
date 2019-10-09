@@ -1,12 +1,15 @@
 import React from 'react';
 import Welcome from './Welcome';
 import ConfirmButton from './ConfirmButton';
+import Page from '../Shared/Page'
+import CoinGrid from './CoinGrid';
 
 export default function(){
     return(
-     <div>
-        <Welcome name="CryptoDash"/>
+     <Page name="Settings">
+        <Welcome/>
         <ConfirmButton/>
-     </div>
+        <CoinGrid/>
+     </Page>
     )
 }

@@ -2,16 +2,19 @@ import React, { Component } from "react";
 import "./App.css";
 import AppLayout from "./AppLayout";
 import AppBar from "./AppBar";
-import {AppProvider} from "./AppProvider";
-import Setting from '../Settings';
+import { AppProvider } from "./AppProvider";
+import Setting from "../Settings";
+import Content from "../Shared/Content";
 
 class App extends Component {
   render() {
     return (
       <AppLayout>
         <AppProvider>
-          <AppBar />
-          <Setting/>
+          <AppBar/>
+          <Content>
+            <Setting />
+          </Content>
         </AppProvider>
       </AppLayout>
     );
