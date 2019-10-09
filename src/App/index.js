@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Welcome from "./Welcome";
 import AppLayout from "./AppLayout";
 import AppBar from "./AppBar";
 import {AppProvider} from "./AppProvider";
+import Setting from '../Settings';
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
           <AppBar />
-          <Welcome name="CryptoDash" />
+          <Setting/>
         </AppProvider>
       </AppLayout>
     );
