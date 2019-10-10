@@ -18,7 +18,8 @@ export class AppProvider extends React.Component{
             addCoin : this.addCoin,
             removeCoin: this.removeCoin,
             isInFavorites: this.isInFavorites,
-            confirmFavorites: this.confirmFavorites
+            confirmFavorites: this.confirmFavorites,
+            setFilterCoins: this.setFilterCoins
         }
     }
 
@@ -51,12 +52,16 @@ export class AppProvider extends React.Component{
     
     }
 
+    isInFavorites = key => _.includes(this.state.favorites, key)
+
+    setFilterCoins = (filterCoins) => this.setState({filterCoins})
+
 
     fetchCoint = async () => {
         let coinList =  (await cc.coinList()).Data;
         this.setState({coinList})
 
-        console.log(coinList)
+        // console.log(coinList)
     }
 
     savedSettings(){
@@ -80,7 +85,5 @@ export class AppProvider extends React.Component{
             </AppContext.Provider>
         )
     }
-
-    isInFavorites = key => _.includes(this.state.favorites, key)
 
 }
