@@ -43,7 +43,7 @@ const Bar = styled.div`
 export default function (){
     return( 
         <Bar>
-          <Logo>CrytoDash</Logo>
+          <Logo>CryptoDash</Logo>
            <div></div>
            <ControlButton active name="Dashboard"/>
            <ControlButton name="Settings"/>
